@@ -1,0 +1,15 @@
+<!-- @format -->
+
+<% include partial/header %>
+
+<body>
+  <main class="container">
+    <% users.forEach(elm=>{%>
+    <div>
+      <h3><%= elm.name %></h3>
+      <p><%= elm.email %></p>
+    </div>
+
+    <%})%>
+  </main>
+</body>
