@@ -6,13 +6,13 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var sassMiddleware = require("node-sass-middleware");
-
 let session = require(`express-session`);
 require(`dotenv`).config();
-
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 let mongoose = require(`mongoose`);
+
+var mongoStore = require(`connect-mongo`);
 
 // connect mongoDB
 
@@ -54,6 +54,9 @@ app.use(
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
+    store: mongoStore.create({
+      mongoUrl: `mongodb://localhost/login-demo`,
+    }),
   })
 );
 
