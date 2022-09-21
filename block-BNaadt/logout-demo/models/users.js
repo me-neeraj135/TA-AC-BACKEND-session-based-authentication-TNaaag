@@ -9,7 +9,7 @@ let userSchema = new Schema(
   {
     name: { type: String, required: true },
     email: { type: String, requited: true, unique: true },
-    password: { type: String, minlength: 4, required: true },
+    password: { type: String, minlength: 5, required: true },
   },
   { timestamps: true }
 );

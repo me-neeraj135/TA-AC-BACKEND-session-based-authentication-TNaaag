@@ -5,6 +5,11 @@
 <body>
   <main class="container">
     <div class="loginContainer">
+      <% if(error){%>
+
+      <h2 class="eflash"><%= error %></h2>
+      <%}%>
+
       <form action="/users/register" method="post">
         <input type="text" name="name" placeholder="user name" />
         <input type="text" name="email" placeholder="user email" />
