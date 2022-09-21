@@ -1,0 +1,30 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>authentication</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header class="pHeader">
+      <nav class="container">
+        <a class="logo" href="/">Home</a>
+        <div>
+          <button>
+            <a href="/users/logout">logout</a>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <div>
+        <h1><%= user.name%></h1>
+        <h2><%= user.email%></h2>
+      </div>
+    </main>
+  </body>
+</html>

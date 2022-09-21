@@ -1,0 +1,67 @@
+/** @format */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  max-width: 100vw;
+  width: 80%;
+  margin: auto; }
+
+.eflash {
+  font-size: 1rem;
+  font-weight: 100;
+  color: red; }
+
+.pHeader {
+  background-color: cornflowerblue;
+  padding: 1rem 0; }
+  .pHeader .logo {
+    font-size: 2rem;
+    text-decoration: none;
+    color: white; }
+  .pHeader nav {
+    display: flex;
+    justify-content: space-between; }
+    .pHeader nav div {
+      width: 15%;
+      display: flex;
+      justify-content: space-between; }
+      .pHeader nav div button {
+        font-size: 1.2rem;
+        background-color: #1dda6b;
+        padding: 0.3rem 0.5rem;
+        border-radius: 4px;
+        border: 1px solid white;
+        text-transform: capitalize; }
+        .pHeader nav div button a {
+          text-decoration: none;
+          color: white; }
+
+.loginContainer {
+  width: 50%;
+  margin: auto;
+  border: 2px solid cornflowerblue;
+  padding: 1rem;
+  margin-top: 3rem; }
+  .loginContainer form {
+    width: 100%; }
+    .loginContainer form input {
+      width: 100%;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      padding: 0.5rem;
+      margin: 1rem 0;
+      outline-color: #f18621; }
+    .loginContainer form button {
+      text-transform: capitalize;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      color: white;
+      border: 1px solid blue;
+      background-color: cornflowerblue; }
+      .loginContainer form button:hover {
+        background-color: blue; }
+
+/*# sourceMappingURL=style.css.map */
