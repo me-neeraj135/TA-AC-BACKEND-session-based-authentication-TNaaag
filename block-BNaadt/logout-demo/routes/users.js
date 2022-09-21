@@ -20,15 +20,27 @@ router.get(`/login`, (req, res, next) => {
 // register user
 
 router.get(`/register`, (req, res, next) => {
-  res.render(`register`);
+  let error = req.flash(`error`)[0];
+
+  res.render(`register`, { error });
 });
 
 // get user register
+
 router.post(`/register`, (req, res, next) => {
   User.create(req.body, (err, user) => {
-    if (err) return next(err);
-    // console.log(err, user);
-    res.redirect(`/users/login`);
+    if (err) {
+      if (err.code === 11000) {
+        req.flash(`error`, `email already registered`);
+        return res.redirect(`/users/register`);
+      }
+      if (err.name === `ValidationError`) {
+        req.flash(`error`, err.message);
+
+        return res.redirect(`/users/register`);
+      }
+    }
+    return res.redirect(`/users/register`);
   });
 });
 
