@@ -48,7 +48,7 @@ router.post(`/login`, (req, res, next) => {
     }
 
     // compare password
-
+222
     user.verifyPassword(password, (err, result) => {
       if (err) return next(err);
       if (!result) {
