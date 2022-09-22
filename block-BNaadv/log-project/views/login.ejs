@@ -1,0 +1,17 @@
+<!-- @format -->
+
+<% include partial/header %>
+<body>
+  <main class="container">
+    <div class="registerFormBox">
+      <% if(msg){%>
+      <p class="error"><%= msg%></p>
+      <%}%>
+      <form action="/users/login" method="post">
+        <input type="email" name="email" placeholder="email" />
+        <input type="password" name="password" placeholder="password" />
+        <button type="submit">login</button>
+      </form>
+    </div>
+  </main>
+</body>
