@@ -52,8 +52,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(
   session({
     secret: process.env.SECRET,
-    resave: flash,
-    saveUninitialized: flash,
+    resave: false,
+    saveUninitialized: false,
     store: MongoStore.create({
       mongoUrl: `mongodb://localhost/logout-demo`,
     }),
@@ -84,11 +84,3 @@ app.use(function (err, req, res, next) {
 });
 
 module.exports = app;
-
-
-
-
-
-
-
-
