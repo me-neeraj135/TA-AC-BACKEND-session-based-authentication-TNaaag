@@ -1,0 +1,21 @@
+<!-- @format -->
+
+<% include partial/header %>
+
+<body>
+  <main class="container">
+    <div class="loginContainer">
+      <% if(error){%>
+
+      <h2 class="eflash"><%= error %></h2>
+      <%}%>
+
+      <form action="/users/register" method="post">
+        <input type="text" name="name" placeholder="user name" />
+        <input type="text" name="email" placeholder="user email" />
+        <input type="password" name="password" placeholder="user password" />
+        <button type="submit">register</button>
+      </form>
+    </div>
+  </main>
+</body>

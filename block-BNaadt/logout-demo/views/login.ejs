@@ -1,0 +1,19 @@
+<!-- @format -->
+
+<% include partial/header %>
+
+<body>
+  <main class="container">
+    <div class="loginContainer">
+      <% if(error){%>
+
+      <h2 class="eflash"><%= error %></h2>
+      <%}%>
+      <form action="/users/login" method="post">
+        <input type="text" name="email" placeholder="email" />
+        <input type="password" name="password" placeholder="password" />
+        <button type="submit">login</button>
+      </form>
+    </div>
+  </main>
+</body>
